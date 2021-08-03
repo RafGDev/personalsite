@@ -1,3 +1,4 @@
+/* eslint-disable @next/next/no-img-element */
 import Image from 'next/image'
 import { Button, Container, Icon } from "@chakra-ui/react";
 import styles from '../styles/Project.module.scss';
