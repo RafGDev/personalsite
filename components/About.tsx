@@ -1,3 +1,4 @@
+/* eslint-disable @next/next/no-img-element */
 import styles from '../styles/About.module.scss';
 import Image from 'next/image';
 import { Box } from '@chakra-ui/react';
@@ -8,7 +9,7 @@ export default function About() {
     <div className={styles.about}>
       <Box className={styles.info}>
         <div className={styles.profilePic}>
-          <img src={profilePicture} alt="Profile Picture" priority={true} />
+          <img src={profilePicture.src} alt="Profile Picture" />
         </div>          
 
         <div className={styles.description}>
