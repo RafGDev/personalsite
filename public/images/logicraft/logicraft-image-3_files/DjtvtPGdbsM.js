@@ -1,3 +1,0 @@
-if (self.CavalryLogger) { CavalryLogger.start_js(["6m6Ccug"]); }
-
-__d("EventCometFullPageEntryPointCompatRoot.entrypoint",["JSResourceForInteraction","buildCometEventDashboardRoute.entrypoint"],(function(a,b,c,d,e,f,g){"use strict";a=c("buildCometEventDashboardRoute.entrypoint")(c("JSResourceForInteraction")("CometFullPageEntryPointCompatRoot.react").__setRef("EventCometFullPageEntryPointCompatRoot.entrypoint"),function(a){a=a.routeProps.maintainKey;return{extraProps:{routeProps:{maintainKey:a}}}});g["default"]=a}),98);

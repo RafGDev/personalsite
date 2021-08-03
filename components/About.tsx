@@ -8,7 +8,7 @@ export default function About() {
     <div className={styles.about}>
       <Box className={styles.info}>
         <div className={styles.profilePic}>
-          <Image src={profilePicture} alt="Profile Picture" />
+          <Image src={profilePicture} alt="Profile Picture" priority={true} />
         </div>          
 
         <div className={styles.description}>
