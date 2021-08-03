@@ -51,7 +51,7 @@ export default function ProjectInstance(props: Props) {
           >
             {props.project.images.map((image, index) => (
               <div key={`image-${index}`} className={styles.carouselImageContainer}>
-                <Image src={image} key={index} alt="Project" className={styles.carouselImage} />
+                <Image priority={index === 0} src={image} key={index} alt="Project" className={styles.carouselImage} />
               </div>
             ))}
           </Carousel>
