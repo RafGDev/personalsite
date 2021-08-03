@@ -1,0 +1,59 @@
+@import "variables";
+
+.project {
+	margin: 50px 0px 0px 50px;
+	display: flex;
+}
+
+.info {
+	flex-basis: 100%;
+}
+
+.name {
+	font-weight: bold;
+}
+
+.description {
+	margin-top: 20px;
+}
+
+
+.carousel {
+	max-height: 400px;
+}
+
+.carouselArrow {
+	font-size: 2rem;
+	cursor: pointer;
+	color: $secondary !important;
+	margin-left: 5px;
+	margin-right: 5px;
+
+	i {
+	}
+}
+
+.carouselImageContainer {
+	max-height: 400px;
+	display: flex;
+}
+
+// Have to override the react-carousel styles here
+.carouselImage {
+	width: auto !important;
+	min-width: auto !important;
+}
+
+@media (max-width: 600px) {
+	.project {
+		flex-direction: column;
+	}
+
+	.carousel {
+		margin-top: 20px;
+	}
+}
+
+
+
+

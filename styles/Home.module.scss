@@ -1,0 +1,23 @@
+@import "variables";
+
+.container {
+  width: 100%;
+  background-color: $primary; 
+  height: 100vh;
+}
+
+.section:nth-child(even) {
+  background-color: #f8f8f8;
+}
+
+.section {
+  padding-top: 80px;
+  padding-bottom: 80px;
+}
+
+.sectionTitle {
+	text-align: center;
+  font-weight: 500;
+  font-size: 1.8rem;
+  margin-bottom: 25px;
+}

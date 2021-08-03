@@ -1,0 +1,40 @@
+.about {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.info {
+  padding: 20px;
+  display: flex;
+  max-width: 1000px;
+}
+
+.profilePic {
+  margin-top: 5px;
+}
+
+.description {
+  padding-left: 25px;
+}
+
+@media (max-width: 500px) {
+  .info {
+    flex-direction: column;
+    align-items: center;
+  } 
+
+  .profilePic {
+      width: 80vw;
+      
+    }
+
+  .description {
+    margin-top: 30px;
+  }
+
+  .about {
+    padding-top: 30px;
+    padding-bottom: 30px;
+  }
+}
