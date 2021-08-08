@@ -13,9 +13,10 @@ export default function About() {
         </div>          
 
         <div className={styles.description}>
-          <p>I am a highly motivated student currently completing a Computer Science degree at the University of Canterbury. I consider myself an eager programmer with a high level of professionalism and a commitment to producing high quality maintainable, scalable and robust technology solutions.</p>
+          <p>I am a software engineer based in Christchurch, New Zealand currently working as a Full Stack Developer for Verizon Connect.</p>
           <br />
-          <p>I am excited to work with a company that has a real passion for their product/service. I also highly value being able to contribute to the companies goals while expanding my own skills at the same time.</p>
+          <p>While I am experienced across both frontend and backend development, my passion is creating high performance backend systems using cloud tools and microservice architectures with tools like C#, Typescript, Postgres and AWS.</p>
+          <br />
         </div>
       </Box>
     </div>

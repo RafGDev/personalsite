@@ -14,7 +14,7 @@ import chillPassImage5 from '../public/images/chill-pass/chill-pass-image-4.png'
 
 const projects: Project[] = [{
     name: 'Full Stack Engineer at Verizon Connect',
-    description: ['Working as a full stack developer in the Compliance team. Primarily developer new features/maintaining an app used by Truck drivers to automatically record their hours of service mandated by the ELD mandate.', 'I am using various different technologies including .Net Core, Typescript, Node, Postgresql and Angular.', 'An interesting project that my team works on is called the Unidentified Driving Service which automatically detects driving done when a driver is not logged into the app.'],
+    description: ['Working as a full stack developer in the Compliance team. Primarily developer new features/maintaining an app used by Truck drivers to automatically record their hours of service.', 'I am using various different technologies including .Net Core, Typescript, Node, Postgresql and Angular.', 'An interesting project that my team works on is called the Unidentified Driving Service which automatically detects driving done when a driver is not logged into the app.'],
   },
   {
     name: 'Part-Time Developer at EPEX LTD',
