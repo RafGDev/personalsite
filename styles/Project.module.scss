@@ -33,15 +33,13 @@
 	}
 }
 
-.carouselImageContainer {
-	max-height: 400px;
-	display: flex;
+.carouselArrowDisabled {
+	@extend .carouselArrow;
+	color: $grey !important;
 }
 
-// Have to override the react-carousel styles here
-.carouselImage {
-	width: auto !important;
-	min-width: auto !important;
+.carouselImageContainer {
+	height: 400px;
 }
 
 @media (max-width: 600px) {

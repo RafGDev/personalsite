@@ -29,8 +29,16 @@ export default function ProjectInstance(props: Props) {
           ))}
         </div>
 
-        {props.project.link && <Button variant="outline" color="secondary.500" borderColor="secondary.500" onClick={() => (window.location.href = props.project.link!)}>Visit Project</Button>}
-        {props.project.codeLink && <Button onClick={() => (window.location.href = props.project.codeLink!)}>View Code</Button>}
+        {props.project.link && (
+          <Button variant="outline" color="secondary.500" borderColor="secondary.500" onClick={() => (window.location.href = props.project.link!)}>
+            Visit Project
+          </Button>
+        )}
+        {props.project.codeLink && (
+          <Button variant="outline" color="secondary.500" borderColor="secondary.500" onClick={() => (window.location.href = props.project.codeLink!)}>
+            View Code
+          </Button>
+        )}
       </div>
 
       {props.project.images && props.project.images.length && (
@@ -41,8 +49,10 @@ export default function ProjectInstance(props: Props) {
                 resolve: arrowsPlugin,
                 options: {
                   arrowLeft: <Icon className={styles.carouselArrow} as={AiFillLeftCircle} />,
+                  arrowLeftDisabled: <Icon className={styles.carouselArrowDisabled} as={AiFillLeftCircle} />,
                   arrowRight: <Icon className={styles.carouselArrow} as={AiFillRightCircle} />,
-                  addArrowClickHandler: true
+                  arrowRightDisabled: <Icon className={styles.carouselArrowDisabled} as={AiFillRightCircle} />,
+                  addArrowClickHandler: true,
                 },
               },
             ]}
@@ -52,7 +62,7 @@ export default function ProjectInstance(props: Props) {
           >
             {props.project.images.map((image, index) => (
               <div key={`image-${index}`} className={styles.carouselImageContainer}>
-                <img src={image.src} key={index} alt="Project" className={styles.carouselImage} />
+                <img src={image.src} key={index} alt="Project" className={styles.carouselImage} loading="lazy" />
               </div>
             ))}
           </Carousel>

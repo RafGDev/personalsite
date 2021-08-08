@@ -9,7 +9,6 @@ import chillPassImage1 from '../public/images/chill-pass/chill-pass-image-1.png'
 import chillPassImage2 from '../public/images/chill-pass/chill-pass-image-2.png';
 import chillPassImage3 from '../public/images/chill-pass/chill-pass-image-3.png';
 import chillPassImage4 from '../public/images/chill-pass/chill-pass-image-4.png';
-import chillPassImage5 from '../public/images/chill-pass/chill-pass-image-4.png';
 
 
 const projects: Project[] = [
@@ -32,7 +31,7 @@ const projects: Project[] = [
   {
     name: "Part-Time Developer at Chill Studio",
     description: ["Worked on a web app for ski pass tracking/management software for a client. I was the sole developer to create a digital ski pass that automated the purchase and processing of previously paper-based ski passes.", "I also integrated the client's Shopify point of sale system into the ski pass software so passes were automatically added after a sale was made through Shopify.", "Technologies used include Typescript, Node, Vue.js, React Native, Postgresql and AWS."],
-    images: [chillPassImage1, chillPassImage2, chillPassImage3, chillPassImage4, chillPassImage5],
+    images: [chillPassImage1, chillPassImage2, chillPassImage3, chillPassImage4],
   },
 ];
 
