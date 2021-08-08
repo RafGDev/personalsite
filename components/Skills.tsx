@@ -1,4 +1,4 @@
-import { SimpleGrid, Container } from "@chakra-ui/react";
+import { SimpleGrid, Container, Tooltip } from "@chakra-ui/react";
 import styles from '../styles/Skills.module.scss';
 
 const skills = [
@@ -125,9 +125,11 @@ export default function Skills() {
 
             <SimpleGrid columns={3} className={styles.skill}>
               {skillType.data.map((skill) => (
-                <div key={skill.icon}>
-                  <i className={`${styles.skill} ${skill.icon}`} />
-                </div>
+                <Tooltip key={skill.icon} label={skill.name} aria-label={skill.name}>
+                  <div key={skill.icon}>
+                    <i className={`${styles.skill} ${skill.icon}`} />
+                  </div>
+                </Tooltip>
               ))}
             </SimpleGrid>
           </div>

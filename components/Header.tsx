@@ -8,7 +8,6 @@ interface Props {
 
 export default function Header(props: Props) {
   const goToAbout = () => {
-    console.log('I made it here');
     props.refToScrollTo.current!.scrollIntoView({behavior: 'smooth'});
   }
 
