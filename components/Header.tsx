@@ -17,10 +17,7 @@ export default function Header(props: Props) {
       <h2 className={styles.subtitle}>Full Stack Developer</h2>
 
       <div className={styles.links}>
-        <a href="/resume.pdf">
-          <Icon as={AiOutlineFilePdf} />
-        </a>
-        <a href="mailto:rafaelgoesmann@gmail.com">
+       <a href="mailto:rafaelgoesmann@gmail.com">
           <Icon as={AiOutlineMail} />
         </a>
         <a href="https://github.com/RafGDev">
