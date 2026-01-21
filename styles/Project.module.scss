@@ -20,6 +20,10 @@
 
 .carousel {
 	max-height: 400px;
+	flex-basis: 100%;
+	min-width: 0;
+	padding: 0 50px;
+	position: relative;
 }
 
 .carouselArrow {
@@ -40,6 +44,15 @@
 
 .carouselImageContainer {
 	height: 400px;
+	display: flex !important;
+	justify-content: center;
+	align-items: center;
+}
+
+.carouselImage {
+	width: 100%;
+	height: 400px;
+	object-fit: contain;
 }
 
 @media (max-width: 600px) {

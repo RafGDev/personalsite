@@ -1,7 +1,8 @@
 import { ChakraProvider, extendTheme } from "@chakra-ui/react";
 import type { AppProps } from 'next/app';
 import '../styles/globals.scss';
-import "@brainhubeu/react-carousel/lib/style.css";
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
 import 'devicon/devicon.min.css';
 
 const theme = extendTheme({

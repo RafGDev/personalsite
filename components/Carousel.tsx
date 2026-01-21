@@ -1,10 +1,10 @@
-import Image from 'next/image';
+import Image, { StaticImageData } from 'next/image';
 import Slider from 'react-slick';
 
 
 interface Props {
   images: StaticImageData[];
-};
+}
 
 export default function App(props: Props) {
      const settings = {
@@ -19,7 +19,11 @@ export default function App(props: Props) {
     return (
       <div style={{border: '1px solid black'}}>
         <Slider {...settings}>
-          <div style={{backgroundColor: 'purple'}}></div>
+          {props.images.map((image, index) => (
+            <div key={index}>
+              <Image src={image} alt={`Slide ${index + 1}`} />
+            </div>
+          ))}
         </Slider>
       </div>
     );

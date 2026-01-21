@@ -1,20 +1,51 @@
 /* eslint-disable @next/next/no-img-element */
-import Image from 'next/image'
 import { Button, Container, Icon } from "@chakra-ui/react";
 import styles from '../styles/Project.module.scss';
 import { Project } from "../types";
-import dynamic from "next/dynamic";
-import { useState } from 'react';
-import { arrowsPlugin } from "@brainhubeu/react-carousel";
-import { AiFillLeftCircle, AiFillRightCircle, AiOutlineLeft, AiOutlineRight } from 'react-icons/ai';
-const Carousel = dynamic(() => import("@brainhubeu/react-carousel"), { ssr: false });
+import Slider from "react-slick";
+import { AiFillLeftCircle, AiFillRightCircle } from 'react-icons/ai';
 
 interface Props {
   project: Project;
 }
 
+interface ArrowProps {
+  onClick?: () => void;
+  disabled?: boolean;
+}
+
+function PrevArrow({ onClick, disabled }: ArrowProps) {
+  return (
+    <Icon
+      className={disabled ? styles.carouselArrowDisabled : styles.carouselArrow}
+      as={AiFillLeftCircle}
+      onClick={onClick}
+      style={{ position: 'absolute', left: '-50px', top: '50%', transform: 'translateY(-50%)', zIndex: 1, cursor: 'pointer' }}
+    />
+  );
+}
+
+function NextArrow({ onClick, disabled }: ArrowProps) {
+  return (
+    <Icon
+      className={disabled ? styles.carouselArrowDisabled : styles.carouselArrow}
+      as={AiFillRightCircle}
+      onClick={onClick}
+      style={{ position: 'absolute', right: '-50px', top: '50%', transform: 'translateY(-50%)', zIndex: 1, cursor: 'pointer' }}
+    />
+  );
+}
+
 export default function ProjectInstance(props: Props) {
-  const [ carouselIndex, setCarouselIndex ] = useState(0);
+  const sliderSettings = {
+    dots: false,
+    infinite: false,
+    speed: 500,
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    prevArrow: <PrevArrow />,
+    nextArrow: <NextArrow />,
+  };
 
   return (
     <Container className={styles.project} maxW="container.xl">
@@ -42,31 +73,15 @@ export default function ProjectInstance(props: Props) {
       </div>
 
       {props.project.images && props.project.images.length && (
-        <>
-          <Carousel
-            plugins={[
-              {
-                resolve: arrowsPlugin,
-                options: {
-                  arrowLeft: <Icon className={styles.carouselArrow} as={AiFillLeftCircle} />,
-                  arrowLeftDisabled: <Icon className={styles.carouselArrowDisabled} as={AiFillLeftCircle} />,
-                  arrowRight: <Icon className={styles.carouselArrow} as={AiFillRightCircle} />,
-                  arrowRightDisabled: <Icon className={styles.carouselArrowDisabled} as={AiFillRightCircle} />,
-                  addArrowClickHandler: true,
-                },
-              },
-            ]}
-            value={carouselIndex}
-            onChange={setCarouselIndex}
-            className={styles.carousel}
-          >
+        <div className={styles.carousel}>
+          <Slider {...sliderSettings}>
             {props.project.images.map((image, index) => (
               <div key={`image-${index}`} className={styles.carouselImageContainer}>
                 <img src={image.src} key={index} alt="Project" className={styles.carouselImage} loading="lazy" />
               </div>
             ))}
-          </Carousel>
-        </>
+          </Slider>
+        </div>
       )}
     </Container>
   );
