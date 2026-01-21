@@ -33,7 +33,6 @@ const projects: Project[] = [
     description: [
       "As a student I was part of a team of three developers, contracted by two real estate veterans to found and develop a peer-to-peer platform. The site was launched in 2020 and enables people to buy and sell residential properties online without the need for real estate agents.",
     ],
-    link: "https://epex.co.nz",
     images: [epexImage1, epexImage2, epexImage3, epexImage4],
   },
   {
